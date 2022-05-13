@@ -6,8 +6,8 @@
 - [Giảng viên](#giảng-viên-hướng-dẫn)
 - [Thành viên nhóm](#thành-viên-nhóm)
 ## GIỚI THIỆU
-- Tên môn học: Cấu trúc dữ liệu và giải thuật nâng cao
-- Mã lớp: CS523.M21.KHCL
+- Tên môn học: Thị giác Máy tính Nâng cao
+- Mã lớp: CS331.M22.KHCL
 
 ## GIẢNG VIÊN HƯỚNG DẪN
 -  TS. 
