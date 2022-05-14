@@ -20,7 +20,7 @@
 | 2 | Trương Van B | 1952**** | 1952****@gm.uit.edu.vn | .... |
 | 3 | Nguyễn Van C | 1952x*x* | 1952x*x*@gm.uit.edu.vn | ... |
 
-# ĐỒ ÁN: Trích xuất thông tin từ hóa đơn
+# ĐỒ ÁN: KEY INFORMATION EXTRACTION FROM RECEIPT.
 
 ## MỤC LỤC:
 
@@ -34,8 +34,22 @@ Trích xuất thông tin hóa đơn trong đồ án nhóm đề cập bao gồm 
 
 #### Mô tả bộ dữ liệu
 
+
+
 #### Detect các trường dữ liệu sử dụng YoloV4
-1. Mô hình YoloV4
+1. Text detection
+
+##### Sử dụng mô hình YOLOv4 cho detect
+
+Object detection là một kĩ thuật trong thị giác máy tính được sử dụng để xác định tọa độ các đối tượng trên hình ảnh hoặc video. YOLOv4 là một máy dò tìm đối tượng single stage phổ biến trong detection và classification sử dụng CNNs. Mạng YOLOv4 bao gồm backbone mạng trích xuất feature và phát hiện các heads để xác định ví trí các đối tượng trong một hình ảnh.
+
+YOLOv4 đạt được nhiều cải thiện về độ chính xác của mạng lưới tích chập (CNN) và tối ưu về tốc độ so với các phiên bản YOLO trước đó.
+
+2. Text recognition
+
+
+3. Key information extraction
+
 
 
 
