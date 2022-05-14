@@ -79,10 +79,7 @@ Trong đó:
   
 - get_store_dict.py: tương tự file py trên mà tại đây sẽ lọc 1 lần nữa những ảnh bên trên để lấy ra những ảnh có label SELLER và ADDRESS.
 
-Sau đó nhóm mới thực hiện quá trình text detection sử dụng model Paddle.
-
-
-	#### Paddle
+	#### Text detect sử dụng model Paddle
 	
 3. Rotation corrector
 4. Textline rotation
