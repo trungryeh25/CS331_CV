@@ -45,13 +45,13 @@ Khi một người có nhu cầu quản lý chi tiêu thì mô hình trích xu�
 
 Trong bài toán information extraction nhóm thực hiện sử dụng dạng dữ liệu là các hóa đơn (Receipt). Nhiệm vụ dặc ra là làm sao có thể phân loại các text box vào các trường thông tin tương ứng, bao gồm: Seller (Tên cửa hàng), Address (Địa chỉ cửa hàng), Timestamp (Ngày tạo hóa đơn), Total Cost (Tổng tiền)) và other (các trường mang thông tin không cần thiết).
 
-Bài toán này được thực hiện khi ta thực hiện 2 bài toán con trước đó là: Scene Text Detection, Scene Text Recognition. Đầu ra của 2 bài toán con này được sử dụng để xây dựng các feature và đồ thị cho bài toán thứ 3 là Key Information Extraction. Đầu vào của mô hình là ảnh, đầu ra tương ứng với mỗi text box sẽ được phân loại thuộc 4 trường thông tin tương ứng.
+Bài toán này được thực hiện khi ta thực hiện 2 bài toán con chính trước đó là: Scene Text Detection, Scene Text Recognition. Đầu ra của 2 bài toán con này được sử dụng để xây dựng các feature và đồ thị cho bài toán cuối cùng là Key Information Extraction. Đầu vào của mô hình là ảnh, đầu ra tương ứng với mỗi text box sẽ được phân loại thuộc 4 trường thông tin tương ứng.
 
 Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong ảnh.
 
 1. Detect hóa đơn trong ảnh
 
-#### YOLOv4
+	#### YOLOv4
 
 2. Text detection
 
@@ -79,17 +79,19 @@ Trong đó:
   
 - get_store_dict.py: tương tự file py trên mà tại đây sẽ lọc 1 lần nữa những ảnh bên trên để lấy ra những ảnh có label SELLER và ADDRESS.
 
-#### Model Paddle
+Sau đó nhóm mới thực hiện quá trình text detection sử dụng model Paddle.
+
+	#### Model Paddle
 
 3. Rotation corrector
 4. Textline rotation
 5. Text recognition
 
-#### VietOCR
+	#### VietOCR
 
 4. Key information extraction
 
-#### PICK 
+	#### KIE Model (PICK) 
 
 
 
