@@ -30,29 +30,66 @@
 
 Khi một người có nhu cầu quản lý chi tiêu thì mô hình trích xuất thông tin này trở nên cần thiết vì nó trích xuất, lưu trữ và tính toán các khoảng tiền mà người đó đã chi tiêu trong 1 khoảng thời gian bằng cách đơn giản là chụp các hóa đơn.  
 
+### Mô tả bộ dữ liệu
+
+
+
+### Tiền xử lý dữ liệu 
+
+Để làm sạch bộ dữ liệu hóa đơn, nhóm thực hiện alignments để đưa các object về cùng 1 hệ tọa độ. 
+
+#### Alignments
+
+
 ### Trích xuất thông tin hóa đơn
 
-Trích xuất thông tin hóa đơn trong đồ án nhóm đề cập bao gồm việc sử dụng 1 mô hình (YoloV4/ detect & crop ra các trường dữ liệu (Seller, Address, Timestamp, Total Cost) có trong hóa đơn, sau đó dùng mô hình VietOCR để đọc các trường dữ liệu vừa có được.
+Trong bài toán information extraction nhóm thực hiện sử dụng dạng dữ liệu là các hóa đơn (Receipt). Nhiệm vụ dặc ra là làm sao có thể phân loại các text box vào các trường thông tin tương ứng, bao gồm: Seller (Tên cửa hàng), Address (Địa chỉ cửa hàng), Timestamp (Ngày tạo hóa đơn), Total Cost (Tổng tiền)) và other (các trường mang thông tin không cần thiết).
 
-#### Mô tả bộ dữ liệu
+Bài toán này được thực hiện khi ta thực hiện 2 bài toán con trước đó là: Scene Text Detection, Scene Text Recognition. Đầu ra của 2 bài toán con này được sử dụng để xây dựng các feature và đồ thị cho bài toán thứ 3 là Key Information Extraction. Đầu vào của mô hình là ảnh, đầu ra tương ứng với mỗi text box sẽ được phân loại thuộc 4 trường thông tin tương ứng.
 
+Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong ảnh.
 
+1. Detect hóa đơn trong ảnh
 
-#### Detect các trường dữ liệu sử dụng YoloV4
-1. Text detection
+#### YOLOv4
 
-##### Sử dụng mô hình YOLOv4 cho detect
+2. Text detection
 
-Object detection là một kĩ thuật trong thị giác máy tính được sử dụng để xác định tọa độ các đối tượng trên hình ảnh hoặc video. YOLOv4 là một máy dò tìm đối tượng single stage phổ biến trong detection và classification sử dụng CNNs. Mạng YOLOv4 bao gồm backbone mạng trích xuất feature và phát hiện các heads để xác định ví trí các đối tượng trong một hình ảnh.
+Để chắc chắn cho một bộ dữ liệu sạch trước khi tiến hành text detection nhóm thực hiện thêm phần phân tích dữ liệu - EDA nhằm loại bỏ số hình bị lỗi, bị gắn sai label,.. còn sót bằng cách run 2 file: filter_training_data_by_rules.py và get_store_dict.py có trong repo github: https://github.com/ndcuong91/MC_OCR/tree/master/mc_ocr/EDA
 
-YOLOv4 đạt được nhiều cải thiện về độ chính xác của mạng lưới tích chập (CNN) và tối ưu về tốc độ so với các phiên bản YOLO trước đó.
+- filter_training_data_by_rules.py: lấy những cái có những keyword sau:
 
-2. Text recognition
+		. TIMESTAMP: ['ngày', 'thời gian', 'giờ']
+    
+		. TOTAL COST: ['tổng tiền', 'cộng tiền hàng', 'tổng cộng', 'thanh toán', 'tại quầy']
+    
+--> Input là file cvs trong folder mc_ocr/data (có thể là file mcocr_train_df_filtered.csv) file csv bao gồm các value: img_id, anno_polygons, anno_texts, anno_labels, anno_num, anno_image_quality
 
+Trong đó:
 
-3. Key information extraction
+		. img_id: là tên của file image
+    
+		. anno_polygons: là toạ độ 5 cái bbox của từng img_id
+    
+		. anno_texts, anno_labels: là label của bbox cũng như chữ cái trong đó (SELLER|||ADDRESS|||TIMESTAMP|||TOTAL_COST|||TOTAL_COST)
+    
+		. anno_num, anno_image_quality: số lượng bbox detect dc và score của chúng.
+    
+==> file này giúp ta lọc ra những ảnh có label TIMPSTAMP và TOTAL COST trước
+  
+- get_store_dict.py: tương tự file py trên mà tại đây sẽ lọc 1 lần nữa những ảnh bên trên để lấy ra những ảnh có label SELLER và ADDRESS.
 
+#### Model Paddle
 
+3. Rotation corrector
+4. Textline rotation
+5. Text recognition
+
+#### VietOCR
+
+4. Key information extraction
+
+#### PICK 
 
 
 
