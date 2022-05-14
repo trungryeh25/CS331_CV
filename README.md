@@ -83,7 +83,7 @@ Sau đó nhóm mới thực hiện quá trình text detection sử dụng model 
 
 
 	#### Paddle
-
+	
 3. Rotation corrector
 4. Textline rotation
 5. Text recognition
