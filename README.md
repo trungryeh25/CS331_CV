@@ -5,6 +5,7 @@
 - [Giới thiệu](#giới-thiệu)
 - [Giảng viên](#giảng-viên-hướng-dẫn)
 - [Thành viên nhóm](#thành-viên-nhóm)
+- [Đồ án](#đồ-án)
 ## GIỚI THIỆU
 - Tên môn học: Thị giác Máy tính Nâng cao
 - Mã lớp: CS331.M22.KHCL
@@ -20,7 +21,8 @@
 | 2 | Trương Van B | 1952**** | 1952****@gm.uit.edu.vn | .... |
 | 3 | Nguyễn Van C | 1952x*x* | 1952x*x*@gm.uit.edu.vn | ... |
 
-# ĐỒ ÁN: KEY INFORMATION EXTRACTION FROM RECEIPT.
+# ĐỒ ÁN
+# KEY INFORMATION EXTRACTION FROM RECEIPT
 
 ## MỤC LỤC:
 
