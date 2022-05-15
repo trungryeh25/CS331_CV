@@ -75,7 +75,7 @@ Trong đó:
     
 		. anno_num, anno_image_quality: số lượng bbox detect dc và score của chúng.
     
--> file này giúp ta lọc ra những ảnh có label TIMPSTAMP và TOTAL COST trước
+-> file này giúp ta lọc ra những ảnh có label TIMESTAMP và TOTAL COST trước
   
 - get_store_dict.py: tương tự file py trên mà tại đây sẽ lọc 1 lần nữa những ảnh bên trên để lấy ra những ảnh có label SELLER và ADDRESS.
 
