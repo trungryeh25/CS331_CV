@@ -107,6 +107,8 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		
 			Sử dụng backbone: ResNet50_vd / MobileNetV3 (Ref: https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/algorithm_det_db_en.md)
 		
+	- Trong bài toán của nhóm, PaddleOCR sẽ detect vùng chữ của 4 trường thông tin [SELLER, ADDRESS, TIMESTAMP, TOTAL COST] trong hóa đơn từ ảnh thu được sau khi detect bằng YOLO.
+	
 	- PaddleOCR text detection format annotation (form mẫu)
 	
 		Định dạng tệp annotation được hổ trợ bởi thuật toán text detection PaddleOCR có dạng như sau, được chia bởi "\t":
