@@ -83,7 +83,7 @@ Trong đó:
 	
 	- Introduction
 	
-	PaddleOCR nhằm mục đích tạo ra các công cụ OCR đa ngôn ngữ, có ích trong việc đào tào mô hình tốt hơn và áp dụng chúng vào thực tế.
+	PaddleOCR nhằm mục đích tạo ra các công cụ OCR đa ngôn ngữ, có ích trong việc đào tạo mô hình tốt hơn và áp dụng chúng vào thực tế.
 	
 	![image](https://user-images.githubusercontent.com/104813668/168458473-a3d61cae-11de-4e7e-b135-fa7095ec9172.png)
 	
@@ -91,7 +91,7 @@ Trong đó:
 
 	- Features 
 	
-	PaddleOCR hỗ trợ một loạt các thuật toán cutting-edge liên quan đến OCR và phát triển feature thực nghiệm mô hình/cách giải quyết PP-OCR và PP-Structure trên cơ sở này, giải pháp tốt cho quá trình chuẩn bị data, model training, compression, inference and deployment.
+	PaddleOCR hỗ trợ một loạt các thuật toán cutting-edge liên quan đến OCR và phát triển feature thực nghiệm mô hình/cách giải quyết PP-OCR và PP-Structure, dựa trên cơ sở này nó cung cấp giải pháp tốt cho quá trình chuẩn bị data, model training, compression, inference and deployment.
 	
 	![image](https://user-images.githubusercontent.com/104813668/168458883-e13833ce-3191-4944-9f49-d8e005a178ca.png)
 	
