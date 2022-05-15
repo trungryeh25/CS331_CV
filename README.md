@@ -176,6 +176,8 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		- TransformerOCR
 
 			![image](https://user-images.githubusercontent.com/104813668/168462852-187a8791-9109-4732-86ad-295f8eb7865b.png)
+			
+			REF: https://pbcquoc.github.io/transformer/
 
 		- Huấn luyện mô hình 
 
