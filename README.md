@@ -55,17 +55,17 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 
 2. Text detection
 
-Để chắc chắn cho một bộ dữ liệu sạch trước khi tiến hành text detection nhóm thực hiện thêm phần phân tích dữ liệu - EDA nhằm loại bỏ số hình bị lỗi, bị gắn sai label,.. còn sót bằng cách run 2 file: filter_training_data_by_rules.py và get_store_dict.py có trong repo github: https://github.com/ndcuong91/MC_OCR/tree/master/mc_ocr/EDA
+	Để chắc chắn cho một bộ dữ liệu sạch trước khi tiến hành text detection nhóm thực hiện thêm phần phân tích dữ liệu - EDA nhằm loại bỏ số hình bị lỗi, bị gắn sai label,.. còn sót bằng cách run 2 file: filter_training_data_by_rules.py và get_store_dict.py có trong repo github: https://github.com/ndcuong91/MC_OCR/tree/master/mc_ocr/EDA
 
-- filter_training_data_by_rules.py: lấy những cái có những keyword sau:
+	- filter_training_data_by_rules.py: lấy những cái có những keyword sau:
 
 		. TIMESTAMP: ['ngày', 'thời gian', 'giờ']
     
 		. TOTAL COST: ['tổng tiền', 'cộng tiền hàng', 'tổng cộng', 'thanh toán', 'tại quầy']
     
--> Input là file cvs trong folder mc_ocr/data (có thể là file mcocr_train_df_filtered.csv) file csv bao gồm các value: img_id, anno_polygons, anno_texts, anno_labels, anno_num, anno_image_quality
+	-> Input là file cvs trong folder mc_ocr/data (có thể là file mcocr_train_df_filtered.csv) file csv bao gồm các value: img_id, anno_polygons, anno_texts, anno_labels, anno_num, anno_image_quality
 
-Trong đó:
+	Trong đó:
 
 		. img_id: là tên của file image
     
@@ -75,50 +75,50 @@ Trong đó:
     
 		. anno_num, anno_image_quality: số lượng bbox detect dc và score của chúng.
     
--> file này giúp ta lọc ra những ảnh có label TIMESTAMP và TOTAL COST trước
+	-> file này giúp ta lọc ra những ảnh có label TIMESTAMP và TOTAL COST trước
   
-- get_store_dict.py: tương tự file py trên mà tại đây sẽ lọc 1 lần nữa những ảnh bên trên để lấy ra những ảnh có label SELLER và ADDRESS.
+	- get_store_dict.py: tương tự file py trên mà tại đây sẽ lọc 1 lần nữa những ảnh bên trên để lấy ra những ảnh có label SELLER và ADDRESS.
 
 	#### Text detect sử dụng model Paddle
 	
 	- Introduction
 	
-	PaddleOCR nhằm mục đích tạo ra các công cụ OCR đa ngôn ngữ, có ích trong việc đào tạo mô hình tốt hơn và áp dụng chúng vào thực tế.
+		PaddleOCR nhằm mục đích tạo ra các công cụ OCR đa ngôn ngữ, có ích trong việc đào tạo mô hình tốt hơn và áp dụng chúng vào thực tế.
 	
-	![image](https://user-images.githubusercontent.com/104813668/168458473-a3d61cae-11de-4e7e-b135-fa7095ec9172.png)
+		![image](https://user-images.githubusercontent.com/104813668/168458473-a3d61cae-11de-4e7e-b135-fa7095ec9172.png)
 	
-	![image](https://user-images.githubusercontent.com/104813668/168458482-ac208551-3b7f-404c-9ec0-9fa958a46e93.png)
+		![image](https://user-images.githubusercontent.com/104813668/168458482-ac208551-3b7f-404c-9ec0-9fa958a46e93.png)
 
 	- Features 
 	
-	PaddleOCR hỗ trợ một loạt các thuật toán cutting-edge liên quan đến OCR và phát triển feature thực nghiệm mô hình/cách giải quyết PP-OCR và PP-Structure, dựa trên cơ sở này nó cung cấp giải pháp tốt cho quá trình chuẩn bị data, model training, compression, inference and deployment.
+		PaddleOCR hỗ trợ một loạt các thuật toán cutting-edge liên quan đến OCR và phát triển feature thực nghiệm mô hình/cách giải quyết PP-OCR và PP-Structure, dựa trên cơ sở này nó cung cấp giải pháp tốt cho quá trình chuẩn bị data, model training, compression, inference and deployment.
 	
-	![image](https://user-images.githubusercontent.com/104813668/168458883-e13833ce-3191-4944-9f49-d8e005a178ca.png)
+		![image](https://user-images.githubusercontent.com/104813668/168458883-e13833ce-3191-4944-9f49-d8e005a178ca.png)
 	
 	- PP-OCR
 	
-	PP-OCR là hệ thống OCR có ích cho sự tự phát triển ultra-lightweight, nó được làm nhẹ và tối ưu dựa trên các thuật toán academic, dựa trên sự cân bằng giữa độ chính xác (accuracy) và thời gian chạy (speed). 
+		PP-OCR là hệ thống OCR có ích cho sự tự phát triển ultra-lightweight, nó được làm nhẹ và tối ưu dựa trên các thuật toán academic, dựa trên sự cân bằng giữa độ chính xác (accuracy) và thời gian chạy (speed). 
 	
-	Nó là hệ thống OCR 2 giai đoạn, bao gồm phần thuận toán text detection là DB, và phần thuật toán text recognition là CRNN. Tuy nhiên, phần text recognition sẽ không được nhóm nhắc đến trong bài vì nhóm đã dùng một mô hình nhận dạng tiếng Việt tốt hơn là VietOCR (được nói kĩ hơn ở mục *).
+		Nó là hệ thống OCR 2 giai đoạn, bao gồm phần thuận toán text detection là DB, và phần thuật toán text recognition là CRNN. Tuy nhiên, phần text recognition sẽ không được nhóm nhắc đến trong bài vì nhóm đã dùng một mô hình nhận dạng tiếng Việt tốt hơn là VietOCR (được nói kĩ hơn ở mục *).
 	
-	PP-OCR áp dụng 19 effective stategies từ 8 khía cạnh bao gồm lựa chọn và điều chỉnh mạng lưới backbone, thiết kế prediction head, tăng cường dữ liệu, chuyển đổi learning rate, lựa chọn tham số phù hợp, sử dụng mô hình pre-training và tự động điều chỉnh mô hình, định lượng để tối ưu hóa và giảm dần các mô hình của mỗi mô-đun.
+		PP-OCR áp dụng 19 effective stategies từ 8 khía cạnh bao gồm lựa chọn và điều chỉnh mạng lưới backbone, thiết kế prediction head, tăng cường dữ liệu, chuyển đổi learning rate, lựa chọn tham số phù hợp, sử dụng mô hình pre-training và tự động điều chỉnh mô hình, định lượng để tối ưu hóa và giảm dần các mô hình của mỗi mô-đun.
 	
-		- Thuật toán DB
+			- Thuật toán DB
 		
-		Sử dụng backbone: ResNet50_vd / MobileNetV3 (Ref: https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/algorithm_det_db_en.md)
+			Sử dụng backbone: ResNet50_vd / MobileNetV3 (Ref: https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/algorithm_det_db_en.md)
 		
 	- PaddleOCR text detection format annotation
 	
-	Định dạng tệp annotation được hổ trợ bởi thuật toán text detection PaddleOCR có dạng như sau, được chia bởi "\t":
+		Định dạng tệp annotation được hổ trợ bởi thuật toán text detection PaddleOCR có dạng như sau, được chia bởi "\t":
 		
 		" Image file name             Image annotation information encoded by json.dumps"
 		ch4_test_images/img_61.jpg    [{"transcription": "MASA", "points": [[310, 104], [416, 141], [418, 216], [312, 179]]}, {...}]	
 		
-	The image annotation sau khi mã hóa json.dumps() là một danh sách chứa nhiều dictionaries. 
+		The image annotation sau khi mã hóa json.dumps() là một danh sách chứa nhiều dictionaries. 
 	
-	"points" trong dictionary đại diện cho tọa độ (x,y) của 4 điểm text box.
+		"points" trong dictionary đại diện cho tọa độ (x,y) của 4 điểm text box.
 	
-	"transciption" đại diện cho text của text box hiện tại.
+		"transciption" đại diện cho text của text box hiện tại.
 	
 3. Rotation corrector
 4. Textline rotation
