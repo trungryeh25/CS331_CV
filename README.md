@@ -117,7 +117,7 @@ Trong đó:
 	
 	"points" trong dictionary đại diện cho tọa độ (x,y) của 4 điểm text box.
 	
-	"transcipt" đại diện cho text của text box hiện tại.
+	"transciption" đại diện cho text của text box hiện tại.
 	
 3. Rotation corrector
 4. Textline rotation
