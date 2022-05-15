@@ -349,13 +349,13 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 
 	#### PICK
 	
-		Sau khi nhận dạng được chi tiết nội dung của 4 trường dữ liệu cần trích xuất, nhóm thực hiện trích xuất chúng bằng PICK.
+	Sau khi nhận dạng được chi tiết nội dung của 4 trường dữ liệu cần trích xuất, nhóm thực hiện trích xuất chúng bằng PICK.
 
-		PICK là một framework hiệu quả và mạnh mẽ trong việc xử lý các bố cục tài liệu phức tạp để trích xuất thông tin (Key Information Extraction- KIE) bằng cách kết hợp việc học đồ thị với toán hạng đồ thị tích chập, mang lại một biểu diễn ngữ nghĩa phong phú hơn chứa các tính năng văn bản, hình ảnh và bố cục chung một cách rõ ràng.
+	PICK là một framework hiệu quả và mạnh mẽ trong việc xử lý các bố cục tài liệu phức tạp để trích xuất thông tin (Key Information Extraction- KIE) bằng cách kết hợp việc học đồ thị với toán hạng đồ thị tích chập, mang lại một biểu diễn ngữ nghĩa phong phú hơn chứa các tính năng văn bản, hình ảnh và bố cục chung một cách rõ ràng.
 		
-		Kiến trúc chung có dạng: 
+	Kiến trúc chung có dạng: 
 		
-		![image](https://user-images.githubusercontent.com/104813668/168464421-7efb8cf7-3c78-4938-b043-de1e55619db0.png)
+	![image](https://user-images.githubusercontent.com/104813668/168464421-7efb8cf7-3c78-4938-b043-de1e55619db0.png)
 		
 		
 		
