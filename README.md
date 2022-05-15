@@ -107,12 +107,12 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		
 			Sử dụng backbone: ResNet50_vd / MobileNetV3 (Ref: https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/algorithm_det_db_en.md)
 		
-	- PaddleOCR text detection format annotation
+	- PaddleOCR text detection format annotation (form mẫu)
 	
 		Định dạng tệp annotation được hổ trợ bởi thuật toán text detection PaddleOCR có dạng như sau, được chia bởi "\t":
 		
 			" Image file name             Image annotation information encoded by json.dumps"
-			ch4_test_images/img_61.jpg    [{"transcription": "MASA", "points": [[310, 104], [416, 141], [418, 216], [312, 179]]}, {...}]	
+			path_images/img.jpg    [{"transcription": "content-images", "points": [[310, 104], [416, 141], [418, 216], [312, 179]]}, {...}]	
 		
 		The image annotation sau khi mã hóa json.dumps() là một danh sách chứa nhiều dictionaries. 
 	
@@ -121,12 +121,27 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		"transciption" đại diện cho text của text box hiện tại.
 	
 3. Rotation corrector
+
+	Xử lý ở bước tiền xử lý?
+
 4. Textline rotation
+
+	Sau khi xoay lại hóa đơn sẽ vẫn còn nhiều dòng chữ bị nghiêng, bước này sẽ cắt vùng chữ đó và xoay lại cho thẳng để phần OCR được tốt hơn.
+
 5. Text recognition
 
-	#### VietOCR
+	Tác giả của VietOCR xây dựng thư viện VietOCR với mục đích giải quyết các bài toán liên quan đến OCR trong công nghiệp, đặc biệt nó rất hiệu quả đối với các bài toán nhận diện chữ tiếng Việt. Vì vậy trong đề tài của nhóm quyết định chọn VietOCR cho phần nhận dạng chữ trên hóa đơn.
 
-4. Key information extraction
+	#### VietOCR
+	
+	- MÔ HÌNH
+		
+		Kết hợp mô hình CNN và mô hình Language Model (Seq2Seq và Transformer) để tạo thành một mô hình giải quyết bài toán OCR.
+		
+		
+		
+
+6. Key information extraction
 
 	#### KIE Model (PICK) 
 
