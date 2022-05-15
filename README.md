@@ -111,8 +111,8 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 	
 		Định dạng tệp annotation được hổ trợ bởi thuật toán text detection PaddleOCR có dạng như sau, được chia bởi "\t":
 		
-		" Image file name             Image annotation information encoded by json.dumps"
-		ch4_test_images/img_61.jpg    [{"transcription": "MASA", "points": [[310, 104], [416, 141], [418, 216], [312, 179]]}, {...}]	
+			" Image file name             Image annotation information encoded by json.dumps"
+			ch4_test_images/img_61.jpg    [{"transcription": "MASA", "points": [[310, 104], [416, 141], [418, 216], [312, 179]]}, {...}]	
 		
 		The image annotation sau khi mã hóa json.dumps() là một danh sách chứa nhiều dictionaries. 
 	
