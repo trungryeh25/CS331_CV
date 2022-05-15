@@ -86,8 +86,7 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		PaddleOCR nhằm mục đích tạo ra các công cụ OCR đa ngôn ngữ, có ích trong việc đào tạo mô hình tốt hơn và áp dụng chúng vào thực tế.
 	
 		![image](https://user-images.githubusercontent.com/104813668/168458473-a3d61cae-11de-4e7e-b135-fa7095ec9172.png)
-	
-		![image](https://user-images.githubusercontent.com/104813668/168458482-ac208551-3b7f-404c-9ec0-9fa958a46e93.png)
+
 
 	- Features 
 	
