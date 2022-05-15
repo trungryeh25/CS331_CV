@@ -185,15 +185,10 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		...
 		Cấu trúc thư mục chứa dữ liệu
 			.
-			
 			├── img
-			
 			│   ├── 00000.jpg
-			
 			│   ├── 00001.jpg
-			
 			├── train_annotation.txt # nhãn tập train 
-			
 			└── val_annotation.txt # nhãn tập test
 			
 		Dữ liệu file nhãn theo định dạng sau
