@@ -104,7 +104,8 @@ Trong đó:
 	PP-OCR áp dụng 19 effective stategies từ 8 khía cạnh bao gồm lựa chọn và điều chỉnh mạng lưới backbone, thiết kế prediction head, tăng cường dữ liệu, chuyển đổi learning rate, lựa chọn tham số phù hợp, sử dụng mô hình pre-training và tự động điều chỉnh mô hình, định lượng để tối ưu hóa và giảm dần các mô hình của mỗi mô-đun.
 	
 		- Thuật toán DB
-		Sử dụng backbone ResNet50_vd, MobileNetV3. (https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/algorithm_det_db_en.md)
+		
+		Sử dụng backbone: ResNet50_vd / MobileNetV3 (Ref: https://github.com/PaddlePaddle/PaddleOCR/blob/release/2.5/doc/doc_en/algorithm_det_db_en.md)
 		
 	- PaddleOCR text detection format annotation
 	
