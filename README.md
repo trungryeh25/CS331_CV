@@ -146,8 +146,9 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 
 			Mô hình Sequence-to-Sequence là mô hình encoders-decoders, nó thường sử dụng Recurrent Neural Network (RNN) để mã hóa đầu vào thành một single vector (single vector ở đây là một context vector). Context vector này sau đó sẽ được giải mã bởi RNN thứ 2, RNN này được học để xuất ra câu mục tiêu.
 				
-				![image](https://user-images.githubusercontent.com/104813668/168463669-a22cc87f-b237-4ade-a939-0a8cf631f5b4.png)
-						
+			![image](https://user-images.githubusercontent.com/104813668/168463669-a22cc87f-b237-4ade-a939-0a8cf631f5b4.png)
+			
+			REF: https://github.com/bentrevett/pytorch-seq2seq/blob/master/1%20-%20Sequence%20to%20Sequence%20Learning%20with%20Neural%20Networks.ipynb
 			
 	
 		- CNN của mô hình OCR 
@@ -190,7 +191,9 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 
 		...
 		Cấu trúc thư mục chứa dữ liệu
+		
 			.
+			
 			├── img
 			
 			│   ├── 00000.jpg
@@ -337,6 +340,9 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 			s = detector.predict(img, return_prob=False) # muốn trả về xác suất của câu dự đoán thì đổi return_prob=True
 			
 	- Kết Quả
+
+
+		REF: https://pbcquoc.github.io/vietocr/
 
 
 6. Key information extraction
