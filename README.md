@@ -143,6 +143,13 @@ Trước tiên nhóm thực hiện xác định vị trí hóa đơn có trong �
 		Kết hợp mô hình CNN và mô hình Language Model (Seq2Seq và Transformer) để tạo thành một mô hình giải quyết bài toán OCR.
 		
 		- Seq2Seq
+
+
+			Mô hình Sequence-to-Sequence là mô hình encoders-decoders, nó thường sử dụng Recurrent Neural Network (RNN) để mã hóa đầu vào thành một single vector (single vector ở đây là một context vector). Context vector này sau đó sẽ được giải mã bởi RNN thứ 2, RNN này được học để xuất ra câu mục tiêu.
+				
+				![image](https://user-images.githubusercontent.com/104813668/168463669-a22cc87f-b237-4ade-a939-0a8cf631f5b4.png)
+						
+			
 	
 		- CNN của mô hình OCR 
 		
