@@ -22,7 +22,7 @@
 | 3 | Nguyễn Van C | 1952x*x* | 1952x*xx*@gm.uit.edu.vn | ... |
 
 # ĐỒ ÁN
-# KEY INFORMATION EXTRACTION FROM RECEIPT
+# *KEY INFORMATION EXTRACTION FROM RECEIPT*
 
 
 		
