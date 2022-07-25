@@ -19,7 +19,7 @@
 |:-:|:------------------|:---------:|:--------:|:-----------:|
 | 1 | Nguyễn Van A | 1952xxxx | 1952xxxx@gm.uit.edu.vn | ...  |
 | 2 | Trương Van B | 1952**** | 1952****@gm.uit.edu.vn | .... |
-| 3 | Nguyễn Van C | 1952x*x* | 1952x*xx*@gm.uit.edu.vn | ... |
+| 3 | Nguyễn Van C | 1952x*x* | 1952x*x*@gm.uit.edu.vn | ... |
 
 # ĐỒ ÁN
 # *KEY INFORMATION EXTRACTION FROM RECEIPT*
