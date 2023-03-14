@@ -11,15 +11,15 @@
 - Mã lớp: CS331.M22.KHCL
 
 ## GIẢNG VIÊN HƯỚNG DẪN
--  TS. 
+-  TS. Mai Tiến Dũng
 
 ## THÀNH VIÊN NHÓM
 
-|STT| Họ Tên | MSSV| Email | Github |
-|:-:|:------------------|:---------:|:--------:|:-----------:|
-| 1 | Nguyễn Van A | 1952xxxx | 1952xxxx@gm.uit.edu.vn | ...  |
-| 2 | Trương Van B | 1952**** | 1952****@gm.uit.edu.vn | .... |
-| 3 | Nguyễn Van C | 1952x*x* | 1952x*x*@gm.uit.edu.vn | ... |
+|STT| Họ Tên |
+|:-:|:------------------|
+| 1 | Nguyễn Khả Tiến | 
+| 2 | Trương Minh Sơn | 
+| 3 | Nguyễn Thành Trung | 
 
 # ĐỒ ÁN
 # *KEY INFORMATION EXTRACTION FROM RECEIPT*
